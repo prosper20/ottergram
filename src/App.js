@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./components/Header";
 import Barry from "./otters/otter1.jpg";
 import Robin from "./otters/otter2.jpg";
 import Maurice from "./otters/otter3.jpg";
@@ -8,9 +9,7 @@ import Barbara from "./otters/otter5.jpg";
 function App() {
   return (
     <div className="App">
-      <header className="header-component">
-        <h1>Ottergram</h1>
-      </header>
+      <Header />
       <ul className="post-list">
         <li className="post-component">
           <button>
