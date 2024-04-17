@@ -1,7 +1,7 @@
-function Post({ image, name }) {
+function Post({ image, name, setSelectedPostName }) {
   return (
     <li className="post-component">
-      <button>
+      <button onClick={() => setSelectedPostName(name)}>
         <img src={image} alt={name} />
         <p className="post-name">{name}</p>
       </button>
