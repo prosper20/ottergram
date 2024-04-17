@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Post from "./components/Post";
+import Barry from "./otters/otter1.jpg";
 import Robin from "./otters/otter2.jpg";
 import Maurice from "./otters/otter3.jpg";
 import Lesley from "./otters/otter3.jpg";
@@ -11,31 +12,11 @@ function App() {
     <div className="App">
       <Header />
       <ul className="post-list">
-        <Post />
-        <li className="post-component">
-          <button>
-            <img src={Robin} alt="Robin" />
-            <p>Robin</p>
-          </button>
-        </li>
-        <li className="post-component">
-          <button>
-            <img src={Maurice} alt="Maurice" />
-            <p>Maurice</p>
-          </button>
-        </li>
-        <li className="post-component">
-          <button>
-            <img src={Lesley} alt="Lesley" />
-            <p>Lesley</p>
-          </button>
-        </li>
-        <li className="post-component">
-          <button>
-            <img src={Barbara} alt="Barbara" />
-            <p>Barbara</p>
-          </button>
-        </li>
+        <Post image={Barry} name="Barry" />
+        <Post image={Robin} name="Robin" />
+        <Post image={Maurice} name="Maurice" />
+        <Post image={Lesley} name="Lesley" />
+        <Post image={Barbara} name="Barbara" />
       </ul>
     </div>
   );
