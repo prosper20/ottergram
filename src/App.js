@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import Barry from "./otters/otter1.jpg";
+import Post from "./components/Post";
 import Robin from "./otters/otter2.jpg";
 import Maurice from "./otters/otter3.jpg";
 import Lesley from "./otters/otter3.jpg";
@@ -11,12 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <ul className="post-list">
-        <li className="post-component">
-          <button>
-            <img src={Barry} alt="Barry" />
-            <p>Barry</p>
-          </button>
-        </li>
+        <Post />
         <li className="post-component">
           <button>
             <img src={Robin} alt="Robin" />
