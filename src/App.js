@@ -7,16 +7,22 @@ import Maurice from "./otters/otter3.jpg";
 import Lesley from "./otters/otter3.jpg";
 import Barbara from "./otters/otter5.jpg";
 
+const ottersArray = [
+  { image: Barry, name: "Barry", id: 1 },
+  { image: Robin, name: "Robin", id: 2 },
+  { image: Maurice, name: "Maurice", id: 3 },
+  { image: Lesley, name: "Lesley", id: 4 },
+  { image: Barbara, name: "Barbara", id: 5 },
+];
+
 function App() {
   return (
     <div className="App">
       <Header />
       <ul className="post-list">
-        <Post image={Barry} name="Barry" />
-        <Post image={Robin} name="Robin" />
-        <Post image={Maurice} name="Maurice" />
-        <Post image={Lesley} name="Lesley" />
-        <Post image={Barbara} name="Barbara" />
+        {ottersArray.map((post) => (
+          <Post key={post.id} image={post.image} name={post.name} />
+        ))}
       </ul>
     </div>
   );
