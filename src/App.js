@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Post from "./components/Post";
+import SelectedItem from "./components/SelectedItem";
 import Barry from "./otters/otter1.jpg";
 import Robin from "./otters/otter2.jpg";
 import Maurice from "./otters/otter3.jpg";
@@ -19,11 +20,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ul className="post-list">
-        {ottersArray.map((post) => (
-          <Post key={post.id} image={post.image} name={post.name} />
-        ))}
-      </ul>
+      <div className="app-content">
+        <ul className="post-list">
+          {ottersArray.map((post) => (
+            <Post key={post.id} image={post.image} name={post.name} />
+          ))}
+        </ul>
+        <SelectedItem image={ottersArray[0].image} name={ottersArray[0].name} />
+      </div>
     </div>
   );
 }
